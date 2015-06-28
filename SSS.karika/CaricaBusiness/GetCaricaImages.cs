@@ -5,13 +5,13 @@ using System.IO;
 using System.Linq;
 using System.Web;
 
-namespace SSS.Carica.CaricaBusiness
+namespace SSS.Karika.KarikaBusiness
 {
-    public class GetCaricaImages
+    public class GetKarikaImages
     {
-        public List<CaricaImage> lstCaricaImages(string directoryPath)
+        public List<KarikaImage> lstKarikaImages(string directoryPath)
         {
-            List<CaricaImage> _lstCaricaImages = new List<CaricaImage>();
+            List<KarikaImage> _lstKarikaImages = new List<KarikaImage>();
 
             if (!Directory.Exists(directoryPath))
             {
@@ -24,20 +24,20 @@ namespace SSS.Carica.CaricaBusiness
             {
                 if (file.Extension.ToUpper() == ".JPG" || file.Extension.ToUpper() == ".PNG")
                 {
-                    // Read File and Convert to CaricaImage
+                    // Read File and Convert to KarikaImage
                     Image _tmpImg = Image.FromFile(file.FullName);
-                    CaricaImage _tmpCarikaImage = GetCaricaImageFromImage(_tmpImg);
+                    KarikaImage _tmpCarikaImage = GetKarikaImageFromImage(_tmpImg);
                     _tmpCarikaImage.Id = Convert.ToInt32(file.Name.Substring(0, 5));
-                    _lstCaricaImages.Add(_tmpCarikaImage);
+                    _lstKarikaImages.Add(_tmpCarikaImage);
                 }
             }
 
-            return _lstCaricaImages;
+            return _lstKarikaImages;
         }
 
-        public CaricaImage GetCaricaImageFromImage(Image image)
+        public KarikaImage GetKarikaImageFromImage(Image image)
         {
-            CaricaImage cImg = new CaricaImage();
+            KarikaImage cImg = new KarikaImage();
 
             if (image == null)
             {
@@ -57,9 +57,9 @@ namespace SSS.Carica.CaricaBusiness
             return cImg;
         }
 
-        public CaricaImage GetCaricaImageFromFileInfo(FileInfo fileInfo)
+        public KarikaImage GetKarikaImageFromFileInfo(FileInfo fileInfo)
         {
-            CaricaImage cImg = new CaricaImage();
+            KarikaImage cImg = new KarikaImage();
             Image image = Image.FromFile(fileInfo.FullName);
             if (image == null)
             {
@@ -79,9 +79,9 @@ namespace SSS.Carica.CaricaBusiness
             return cImg;
         }
 
-        public CaricaImage GetCaricaImageFromFilePath(String filePath)
+        public KarikaImage GetKarikaImageFromFilePath(String filePath)
         {
-            CaricaImage cImg = new CaricaImage();
+            KarikaImage cImg = new KarikaImage();
             FileInfo infoo = new FileInfo(HttpContext.Current.Server.MapPath(filePath));
             Image image = Image.FromFile(infoo.FullName);
             if (image == null)

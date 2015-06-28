@@ -7,8 +7,8 @@
     <ProjectGuid>{E3BFD211-CF30-4E2F-8FDF-24BFFE9713DE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SSS.Carica</RootNamespace>
-    <AssemblyName>SSS.Carica</AssemblyName>
+    <RootNamespace>SSS.Karika</RootNamespace>
+    <AssemblyName>SSS.Karika</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

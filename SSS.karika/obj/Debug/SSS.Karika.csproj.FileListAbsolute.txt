@@ -1,0 +1,5 @@
+D:\Soner Acar\Document\GitHub\karika\SSS.karika\bin\Debug\SSS.Karika.dll
+D:\Soner Acar\Document\GitHub\karika\SSS.karika\bin\Debug\SSS.Karika.pdb
+D:\Soner Acar\Document\GitHub\karika\SSS.karika\obj\Debug\SSS.Karika.csprojResolveAssemblyReference.cache
+D:\Soner Acar\Document\GitHub\karika\SSS.karika\obj\Debug\SSS.Karika.dll
+D:\Soner Acar\Document\GitHub\karika\SSS.karika\obj\Debug\SSS.Karika.pdb

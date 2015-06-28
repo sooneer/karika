@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SSS.Carica
+namespace SSS.Karika
 {
-    public class CaricaImage
+    public class KarikaImage
     {
         public int Id { get; set; }
         public string Subject { get; set; }

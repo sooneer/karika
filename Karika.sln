@@ -3,28 +3,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSS.Carica", "SSS.karika\SSS.Carica.csproj", "{E3BFD211-CF30-4E2F-8FDF-24BFFE9713DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSS.Karika", "SSS.karika\SSS.Karika.csproj", "{E3BFD211-CF30-4E2F-8FDF-24BFFE9713DE}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CarikaWebSites", "http://localhost:29447", "{E1F7D3EB-C22F-4B2F-82C9-F5275BCF8656}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "KarikaWebSite", "http://localhost:37446", "{C961F25D-9C3C-4B15-9BE7-1FF2BF99750E}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		ProjectReferences = "{e3bfd211-cf30-4e2f-8fdf-24bffe9713de}|SSS.Carica.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_29447"
-		Debug.AspNetCompiler.PhysicalPath = "CarikaWebSites\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_29447\"
+		ProjectReferences = "{e3bfd211-cf30-4e2f-8fdf-24bffe9713de}|SSS.Karika.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_37446"
+		Debug.AspNetCompiler.PhysicalPath = "KarikaWebSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_37446\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_29447"
-		Release.AspNetCompiler.PhysicalPath = "CarikaWebSites\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_29447\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_37446"
+		Release.AspNetCompiler.PhysicalPath = "KarikaWebSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_37446\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "CarikaWebSites\"
+		SlnRelativePath = "KarikaWebSite\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -38,10 +38,10 @@ Global
 		{E3BFD211-CF30-4E2F-8FDF-24BFFE9713DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3BFD211-CF30-4E2F-8FDF-24BFFE9713DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3BFD211-CF30-4E2F-8FDF-24BFFE9713DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1F7D3EB-C22F-4B2F-82C9-F5275BCF8656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1F7D3EB-C22F-4B2F-82C9-F5275BCF8656}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1F7D3EB-C22F-4B2F-82C9-F5275BCF8656}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1F7D3EB-C22F-4B2F-82C9-F5275BCF8656}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{C961F25D-9C3C-4B15-9BE7-1FF2BF99750E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C961F25D-9C3C-4B15-9BE7-1FF2BF99750E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C961F25D-9C3C-4B15-9BE7-1FF2BF99750E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C961F25D-9C3C-4B15-9BE7-1FF2BF99750E}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

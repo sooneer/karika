@@ -8,8 +8,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Net;
-using SSS.Carica.CaricaBusiness;
-using SSS.Carica;
+using SSS.Karika.KarikaBusiness;
+using SSS.Karika;
 
 public partial class _default : BasePage
 {
@@ -33,10 +33,10 @@ public partial class _default : BasePage
         try
         {
 
-            GetCaricaImages img = new GetCaricaImages();
-            string caricaPath = String.Format(@"/upload/images/{0}", ConvertToImageName(p));
-            CaricaImage carica = img.GetCaricaImageFromFilePath(caricaPath);
-            if (carica == null)
+            GetKarikaImages img = new GetKarikaImages();
+            string KarikaPath = String.Format(@"/upload/images/{0}", ConvertToImageName(p));
+            KarikaImage Karika = img.GetKarikaImageFromFilePath(KarikaPath);
+            if (Karika == null)
             {
                 throw new Exception("Karikatür Bulunamadı.");
             }
@@ -127,16 +127,16 @@ public partial class _default : BasePage
     }
 
     [WebMethod]
-    public static CaricaImage KarikaturBilgisiGetir(string idKarikatur)
+    public static KarikaImage KarikaturBilgisiGetir(string idKarikatur)
     {
-        CaricaImage carica = new CaricaImage();
+        KarikaImage Karika = new KarikaImage();
         try
         {
-            GetCaricaImages img = new GetCaricaImages();
+            GetKarikaImages img = new GetKarikaImages();
             Decimal id = Convert.ToDecimal(idKarikatur);
-            string caricaPath = String.Format(@"/upload/images/{0}", ConvertToImageName(id));
-            carica = img.GetCaricaImageFromFilePath(caricaPath);
-            if (carica == null)
+            string KarikaPath = String.Format(@"/upload/images/{0}", ConvertToImageName(id));
+            Karika = img.GetKarikaImageFromFilePath(KarikaPath);
+            if (Karika == null)
             {
                 throw new Exception("Karikatür Bulunamadı.");
             }
@@ -148,7 +148,7 @@ public partial class _default : BasePage
             throw new Exception("Tanımsız bir hata oluştu. Hata Detayı : " + ex.Message);
         }
 
-        return carica;
+        return Karika;
     }
 
     public static string ConvertToDate(DateTime dt)
