@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 
-namespace SSS.Karika.KarikaBusiness
+namespace SSS.Karika.Business
 {
     public class GetKarikaImages
     {

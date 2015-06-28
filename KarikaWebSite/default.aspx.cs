@@ -8,7 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Net;
-using SSS.Karika.KarikaBusiness;
+using SSS.Karika.Business;
 using SSS.Karika;
 
 public partial class _default : BasePage
