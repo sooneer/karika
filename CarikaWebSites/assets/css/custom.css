@@ -1,0 +1,53 @@
+﻿* { outline: none !important; }
+body { background-color: #E9EAED; padding-top: 10px; padding-bottom: 20px; }
+.karikatur-bg { background-color: #F6F7F8; margin: 0 15px; height: 475px; vertical-align: middle; display: block; }
+.img-bg { background-color: #808080; display: block; height: 475px; width: 100%; }
+	.img-bg img { padding: 5px; }
+
+.detay { overflow-y: auto; height: 450px; }
+
+.content{background-color:#f6f7f8;
+		 padding: 5px 15px 15px 15px;
+}
+
+.footer { border-top: 1px solid #C5C5C5; color: #777; padding: 10px 0 0 0; }
+.navbar { margin-bottom: 10px; padding: 0; }
+.no-margin-left { padding-left: 0; }
+.no-margin-right { padding-left: 0; }
+.no-margin { padding: 0; }
+.img-trans { display: block; background-color: transparent; height: 100%; width: 100%; position: absolute; }
+.baslik { color: #292f33; font-size: 16px; font-weight: bold; line-height: 100%; margin: 10px 0; padding: 0; text-align: left; }
+
+#karikaturAciklama { text-align: left; }
+
+/* Yorum Detayları */
+
+span.aciklamaDevami, #aciklamaGizle { display: none; }
+#devaminiOku, #aciklamaGizle { font-weight: normal; color: #337ab7; cursor: pointer; }
+	#devaminiOku:hover, #aciklamaGizle:hover { text-decoration: underline; }
+
+/* Yorumlar Kısmı */
+ul.yorumlar { list-style: outside none none; padding-left: 0; }
+
+	ul.yorumlar li.yorum:first-child { margin-top: 0; }
+	ul.yorumlar li.yorum { margin-top: 15px; }
+		ul.yorumlar li.yorum a.yorum-sol img { width: 50px; height: 50px; }
+		ul.yorumlar li.yorum a.yorum-sag img { width: 50px; height: 50px; }
+		ul.yorumlar h4{font-weight:bold;margin:0 0 5px 0; font-size:12px;}
+		ul.yorumlar .yorum-icerik{font-size:12px; }
+
+		#digerYorumlar{cursor:pointer;  font-weight: normal; color: #337ab7; display:none; }
+.yorum-sol, .yorum-sag, .yorum-icerik { display: table-cell; vertical-align: top; line-height: 120%; }
+.yorum-sol, .yorum > .pull-left { padding-right: 10px; }
+
+@media (max-width: 768px) {
+	.karikatur-bg { height: inherit; }
+
+	.img-bg { height: 300px; }
+
+	.pagination > li > a, .pagination > li > span { padding: 6px 12px; font-size: 14px; }
+
+	#imgKarikatur { max-height: 300px !important; }
+
+	.detay { height: 300px; }
+}

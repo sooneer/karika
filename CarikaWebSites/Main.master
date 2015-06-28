@@ -1,0 +1,145 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Karikatür Dünyası</title>
+
+    <%--<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />--%>
+    <link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap -->
+    <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="/assets/css/custom.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/tr_TR/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+        <div class="container theme-showcase" role="main">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Karikatür Dünyası</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">Karikatür Dünyası</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/amacimiz.aspx">Amacımız</a></li>
+                            <li><a href="/iletisim.aspx">İletişim</a></li>
+                        </ul>
+                        <%--   <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+                            <li><a href="../navbar-static-top/">Static top</a></li>
+                            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+                        </ul>--%>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+                <!--/.container-fluid -->
+            </nav>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+                <div class="row">
+                    <div class="karikatur-bg">
+                        <div class="col-md-8 col-lg-8 col-xs-12 no-margin">
+                            <div class="img-bg">
+                                <div class="img-trans"></div>
+                                <img id="imgKarikatur" runat="server" src="/" data-adi="" class="img-responsive" style="max-height: 450px; margin: auto !important;" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-lg-4 col-xs-12 detay">
+                            <h3 id="karikaturBaslik" class="baslik"></h3>
+                            <div id="karikaturAciklama"></div>
+                            <span id="karikaturEklenmeTarihi" class="label label-default text-left" style="float: right;" title=''></span>
+
+                            <br />
+                            <br />
+                            <ul class="yorumlar"></ul>
+                            <span id="digerYorumlar">Diğer Yorumlar...</span>
+
+                            <a id="btnIndir" href="#" class="btn btn-xs btn-default" download="">Karikatürü İndir</a>
+                            <button class="btn btn-xs btn-default" type="button">Paylaş</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav style="text-align: center;" id="sayfalama">
+
+                            <asp:ListView runat="server" ID="lstSayfalama" ClientIDMode="Static">
+                                <LayoutTemplate>
+                                    <ul class="pagination pagination-lg text-center">
+                                        <li class="disabled"><a href="javascript:;" class="btnSonraki"><span aria-hidden="true">&laquo;</span><span class="sr-only">Sonraki</span></a></li>
+                                        <asp:PlaceHolder ID="GroupPlaceHolder" runat="server"></asp:PlaceHolder>
+                                        <li><a href="javascript:;" class="btnOnceki"><span aria-hidden="true">&raquo;</span><span class="sr-only">Önceki</span></a></li>
+                                    </ul>
+                                    </table>
+                                </LayoutTemplate>
+                                <GroupTemplate>
+                                    <asp:PlaceHolder ID="ItemPlaceHolder" runat="server"></asp:PlaceHolder>
+                                </GroupTemplate>
+                                <ItemTemplate>
+                                    <li><a href="javascript:;" class="karikatur" data-adi="<%# Eval("FotografAdi") %>" data-id="<%# Eval("IdFotograf") %>"><%# Eval("IdFotograf") %></a></li>
+                                </ItemTemplate>
+                                <EmptyDataTemplate>
+                                    Boş Data
+                                </EmptyDataTemplate>
+                            </asp:ListView>
+
+
+                            <%--    
+                            FotografAdi
+                             FotografYolu
+                            FotografTuru
+                            FotografBoyutu
+                            --%>
+                        </nav>
+                    </div>
+
+                </div>
+            </asp:ContentPlaceHolder>
+            <footer class="footer">
+                <p>Telif Hakkı &copy; <%=DateTime.Now.Year %> <b>Karikatür Dünyası</b>, Tüm hakları saklıdır. <span style="float: right;"><a href="amacimiz.aspx" class="">Site Kullanım Koşulları</a> - <a href="amacimiz.aspx" class="">Gizlilik Bildirimi</a></span></p>
+            </footer>
+        </div>
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="/assets/plugins/jquery/jquery.1.11.1.min.js"></script>
+        <script src="/assets/plugins/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/assets/plugins/jquery-timeago/jquery.timeago.js"></script>
+        <script src="/assets/plugins/jquery-timeago/jquery.timeago.tr.js"></script>
+        <script src="/assets/js/custom.js"></script>
+        <asp:ContentPlaceHolder ID="Scripts" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
