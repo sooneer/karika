@@ -42,8 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\GetCaricaImages.cs" />
-    <Compile Include="Models\CaricaImage.cs" />
+    <Compile Include="Business\GetKarikaImages.cs" />
+    <Compile Include="Business\KarikaBusiness.cs" />
+    <Compile Include="Models\KarikaImage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

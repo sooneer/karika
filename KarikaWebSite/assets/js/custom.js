@@ -3,6 +3,8 @@
     var idKarika = 0;
     sonId = parseInt(sonId, 10);
 
+    $(".fb-like").attr("data-href", "/Caricature.aspx?id=" + sonId);
+
     function dosyaAdiGetir(id) {
         var dosyaAdi;
         if (id > 9999) {

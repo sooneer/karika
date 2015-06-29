@@ -34,7 +34,7 @@ public partial class _default : BasePage
         {
 
             GetKarikaImages img = new GetKarikaImages();
-            string KarikaPath = String.Format(@"/upload/images/{0}", ConvertToImageName(p));
+            string KarikaPath = String.Format(@"/upload/images/{0}", KarikaBusiness.ConvertToImageName(p));
             KarikaImage Karika = img.GetKarikaImageFromFilePath(KarikaPath);
             if (Karika == null)
             {
@@ -69,47 +69,6 @@ public partial class _default : BasePage
         }
     }
 
-    private static string ConvertToImageName(decimal id)
-    {
-        String result = string.Empty;
-
-        if (id > 9999)
-        {
-            result = id.ToString() + ".jpg";
-        }
-        else
-        {
-            if (id > 999)
-            {
-                result = "0" + id.ToString() + ".jpg";
-            }
-            else
-            {
-                if (id > 99)
-                {
-                    result = "00" + id.ToString() + ".jpg";
-                }
-                else
-                {
-                    if (id > 9)
-                    {
-                        result = "000" + id.ToString() + ".jpg";
-                    }
-                    else
-                    {
-                        if (id > 0)
-                        {
-                            result = "0000" + id.ToString() + ".jpg";
-                        }
-                    }
-                }
-            }
-        }
-
-        return result;
-
-    }
-
     private void initPage()
     {
         try
@@ -134,7 +93,7 @@ public partial class _default : BasePage
         {
             GetKarikaImages img = new GetKarikaImages();
             Decimal id = Convert.ToDecimal(idKarikatur);
-            string KarikaPath = String.Format(@"/upload/images/{0}", ConvertToImageName(id));
+            string KarikaPath = String.Format(@"/upload/images/{0}", KarikaBusiness.ConvertToImageName(id));
             Karika = img.GetKarikaImageFromFilePath(KarikaPath);
             if (Karika == null)
             {

@@ -69,4 +69,8 @@
     <asp:Label ID="lblSonFotografId" runat="server" ClientIDMode="Static" Style="margin-left: -3000px; line-height: 0; width: 0; height: 0; opacity: 0; display: block; position: absolute;" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="Server">
+        <script src="/assets/plugins/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+        <script src="/assets/plugins/jquery-timeago/jquery.timeago.js"></script>
+        <script src="/assets/plugins/jquery-timeago/jquery.timeago.tr.js"></script>
+        <script src="/assets/js/custom.js"></script>
 </asp:Content>

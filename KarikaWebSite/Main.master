@@ -132,12 +132,8 @@
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="/assets/plugins/jquery/jquery.1.11.1.min.js"></script>
-        <script src="/assets/plugins/jquery-mousewheel/jquery.mousewheel.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-        <script src="/assets/plugins/jquery-timeago/jquery.timeago.js"></script>
-        <script src="/assets/plugins/jquery-timeago/jquery.timeago.tr.js"></script>
-        <script src="/assets/js/custom.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
         <asp:ContentPlaceHolder ID="Scripts" runat="server">
         </asp:ContentPlaceHolder>
     </form>
