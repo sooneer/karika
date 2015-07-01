@@ -1,6 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeFile="default.aspx.cs" Inherits="_default" %>
 
-
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
@@ -36,17 +35,8 @@
                                     Boş Data
                                 </EmptyDataTemplate>
                             </asp:ListView>
-
-
-                            <%--    
-                            FotografAdi
-                             FotografYolu
-                            FotografTuru
-                            FotografBoyutu
-                            --%>
                         </nav>
                     </div>
-
                 </div>
             </div>
 
@@ -57,20 +47,22 @@
 
                 <br />
                 <div class="fb-like" data-href="http://www.soneracar.net/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+
                 <a id="btnIndir" href="#" class="btn btn-xs btn-primary" download="">Karikatürü İndir</a>
 
                 <br />
                 <hr />
-
-                <div class="fb-comments" data-href="http://www.soneracar.net/" data-width="100%" data-numposts="5" data-colorscheme="light"></div>
+                <div id="layerFB">
+                    <div class="fb-comments" data-href="http://www.soneracar.net/" data-width="100%" data-numposts="5" data-colorscheme="light"></div>
+                </div>
             </div>
         </div>
     </div>
     <asp:Label ID="lblSonFotografId" runat="server" ClientIDMode="Static" Style="margin-left: -3000px; line-height: 0; width: 0; height: 0; opacity: 0; display: block; position: absolute;" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="Server">
-        <script src="/assets/plugins/jquery-mousewheel/jquery.mousewheel.min.js"></script>
-        <script src="/assets/plugins/jquery-timeago/jquery.timeago.js"></script>
-        <script src="/assets/plugins/jquery-timeago/jquery.timeago.tr.js"></script>
-        <script src="/assets/js/custom.js"></script>
+    <script src="/assets/plugins/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+    <script src="/assets/plugins/jquery-timeago/jquery.timeago.js"></script>
+    <script src="/assets/plugins/jquery-timeago/jquery.timeago.tr.js"></script>
+    <script src="/assets/js/custom.js"></script>
 </asp:Content>

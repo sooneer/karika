@@ -50,7 +50,7 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li><a href="/amacimiz.aspx">Amacımız</a></li>
-                            <li><a href="/iletisim.aspx">İletişim</a></li>
+                          <%--  <li><a href="/iletisim.aspx">İletişim</a></li>--%>
                         </ul>
                         <%--   <ul class="nav navbar-nav navbar-right">
                             <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
@@ -80,8 +80,6 @@
 
                             <br />
                             <br />
-                            <ul class="yorumlar"></ul>
-                            <span id="digerYorumlar">Diğer Yorumlar...</span>
 
                             <a id="btnIndir" href="#" class="btn btn-xs btn-default" download="">Karikatürü İndir</a>
                             <button class="btn btn-xs btn-default" type="button">Paylaş</button>

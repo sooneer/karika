@@ -3,7 +3,7 @@
     var idKarika = 0;
     sonId = parseInt(sonId, 10);
 
-    $(".fb-like").attr("data-href", "/Caricature.aspx?id=" + sonId);
+   // $(".fb-comments").attr("data-href", "/Caricature.aspx?id=" + sonId);
 
     function dosyaAdiGetir(id) {
         var dosyaAdi;
@@ -295,6 +295,14 @@
 
     function KarikaturBilgisiGetir(idKarikatur) {
         idKarika = parseInt(idKarikatur, 10);
+
+        //$("#layerFB").html("");
+        ////var fbHtml = "<div class=\"fb-like\" data-href=\"/Caricature.aspx?id=" + +idKarika + "\" data-layout=\"button_count\" data-action=\"like\" data-show-faces=\"true\" data-share=\"true\"></div>";
+        //var fbHtml = "<div class=\"fb-comments\" data-href=\"/Caricature.aspx?id=" + +idKarika + "\" data-width=\"100%\" data-numposts=\"5\" data-colorscheme=\"light\"></div>";
+        //$("#layerFB").html(fbHtml);
+
+        ////facebook comments
+        //FB.XFBML.parse();
 
         $.ajax({
             type: "POST",
